@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import MetaTags from "@/components/MetaTags";
 
 const metaData = {
@@ -25,11 +24,7 @@ const metaData = {
 const App = ({ Component, pageProps }: AppProps) => {
     return (
         <>
-            <Head>
-                <title>{metaData.title}</title>
-                <MetaTags metaData={metaData} />
-            </Head>
-
+            <MetaTags metaData={metaData} />
             <Component {...pageProps} />
         </>
     );

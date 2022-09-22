@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 type Tags = {
     title: string;
     description: string;
@@ -17,8 +19,9 @@ type Tags = {
 
 export default function MetaTags({ metaData }: { metaData: Tags }) {
     return (
-        <>
+        <Head>
             {/* Primary Meta Tags */}
+            <title>{metaData.title}</title>
             <link rel="canonical" href={metaData.url} />
 
             {metaData.icons.map((icon) => (
@@ -52,6 +55,6 @@ export default function MetaTags({ metaData }: { metaData: Tags }) {
             <meta property="twitter:title" content={metaData.title} />
             <meta property="twitter:description" content={metaData.description} />
             <meta property="twitter:image" content={metaData.image} />
-        </>
+        </Head>
     );
 }
