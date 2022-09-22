@@ -12,6 +12,14 @@ const config = (phase) => {
      */
     let settings = {
         reactStrictMode: true,
+        poweredByHeader: false,
+        cleanDistDir: true,
+        redirects: async () => {
+            return [];
+        },
+        rewrites: async () => {
+            return [];
+        },
     };
 
     if (phase !== PHASE_DEVELOPMENT_SERVER) {
