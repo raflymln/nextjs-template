@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply scroll-smooth scroll-pt-12;
+    }
+
+    * {
+        @apply !box-border;
+    }
+}
+
+@layer components {
+    .container {
+        @apply relative mx-auto max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-screen-xl 3xl:max-w-screen-2xl;
+    }
+}
