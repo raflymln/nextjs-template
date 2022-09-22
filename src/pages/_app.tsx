@@ -14,7 +14,7 @@ const metaData = {
     language: "English",
     icons: [
         {
-            src: "/favicon.ico",
+            src: "/images/favicon.ico",
             sizes: "32x32",
             type: "image/ico",
         },
