@@ -46,7 +46,7 @@
         "arrowParens": "always",
         "endOfLine": "auto",
         "htmlWhitespaceSensitivity": "css",
-        "bracketSameLine": true,
+        "bracketSameLine": false,
         "jsxSingleQuote": false,
         "printWidth": 200,
         "semi": true,
