@@ -1,13 +1,14 @@
-module.exports = {
+// @ts-check
+
+module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
     mode: "jit",
     content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx}", //
-        "./src/components/**/*.{js,ts,jsx,tsx}",
+        "./src/**/*.{js,ts,jsx,tsx}", //
     ],
+    corePlugins: {
+        container: false,
+    },
     theme: {
-        corePlugins: {
-            container: false,
-        },
         colors: {
             transparent: "transparent",
             current: "currentColor",
@@ -15,14 +16,14 @@ module.exports = {
             white: "#fff",
         },
         fontFamily: {},
+        screens: {
+            xs: "360px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1200px",
+            "2xl": "1440px",
+        },
         extend: {},
     },
-    variants: {
-        extend: {
-            screens: {
-                "3xl": "1920px",
-            },
-        },
-    },
     plugins: [],
-};
+});
