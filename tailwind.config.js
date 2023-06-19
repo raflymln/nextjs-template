@@ -5,9 +5,6 @@ module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
     content: [
         "./src/**/*.{js,ts,jsx,tsx}", //
     ],
-    corePlugins: {
-        container: false,
-    },
     theme: {
         colors: {
             transparent: "transparent",
