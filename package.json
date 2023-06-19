@@ -1,6 +1,6 @@
 {
     "name": "my-nextjs-project",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "description": "NextJS project template by Rafly Maulana",
     "main": "index.js",
     "repository": "https://github.com/raflymln/nextjs-template.git",
@@ -15,30 +15,133 @@
     "private": true,
     "contributors": [],
     "scripts": {
-        "dev": "next dev",
+        "dev": "start http://localhost:3000 && next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "git:prepare": "husky install"
     },
-    "dependencies": {
-        "@prisma/client": "^4.15.0",
-        "next": "^13.4.6",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@types/node": "^20.3.1",
-        "@types/react": "^18.2.13",
-        "autoprefixer": "^10.4.14",
-        "eslint": "^8.43.0",
-        "eslint-config-next": "^13.4.6",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "postcss": "^8.4.24",
-        "prettier": "^2.8.8",
-        "prisma": "^4.15.0",
-        "tailwindcss": "^3.3.2",
-        "typescript": "^5.1.3"
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "prettier",
+            "import",
+            "no-relative-import-paths"
+        ],
+        "extends": [
+            "prettier",
+            "eslint:recommended",
+            "next/core-web-vitals",
+            "plugin:import/recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:tailwindcss/recommended",
+            "plugin:react/recommended"
+        ],
+        "rules": {
+            "no-case-declarations": "off",
+            "no-empty-function": "off",
+            "prefer-const": "off",
+            "prettier/prettier": "error",
+            "@next/next/no-img-element": "off",
+            "react/no-unescaped-entities": "off",
+            "import/no-duplicates": "error",
+            "import/no-absolute-path": "error",
+            "import/no-namespace": "error",
+            "import/first": "error",
+            "import/no-anonymous-default-export": "error",
+            "import/order": [
+                "error",
+                {
+                    "newlines-between": "always",
+                    "groups": [
+                        "type",
+                        "index",
+                        "sibling",
+                        "parent",
+                        "internal",
+                        "external",
+                        "builtin",
+                        "object"
+                    ],
+                    "alphabetize": {
+                        "order": "asc",
+                        "caseInsensitive": true
+                    }
+                }
+            ],
+            "no-relative-import-paths/no-relative-import-paths": [
+                "error",
+                {
+                    "allowSameFolder": false,
+                    "rootDir": "src",
+                    "prefix": "@"
+                }
+            ],
+            "@typescript-eslint/consistent-type-imports": [
+                "error",
+                {
+                    "prefer": "type-imports",
+                    "disallowTypeAnnotations": true,
+                    "fixStyle": "separate-type-imports"
+                }
+            ],
+            "tailwindcss/no-custom-classname": [
+                "error",
+                {
+                    "whitelist": [
+                        "group(/.*)?"
+                    ]
+                }
+            ],
+            "tailwindcss/no-arbitrary-value": "warn",
+            "react/react-in-jsx-scope": "off",
+            "react/jsx-boolean-value": "error",
+            "react/destructuring-assignment": [
+                "error",
+                "always"
+            ],
+            "react/jsx-curly-brace-presence": [
+                "error",
+                {
+                    "props": "never",
+                    "children": "never",
+                    "propElementValues": "always"
+                }
+            ],
+            "react/jsx-sort-props": [
+                "error",
+                {
+                    "multiline": "last",
+                    "ignoreCase": false,
+                    "noSortAlphabetically": true,
+                    "reservedFirst": [
+                        "key",
+                        "ref"
+                    ],
+                    "locale": "auto"
+                }
+            ],
+            "react/jsx-no-useless-fragment": "error",
+            "react/no-unknown-property": "error",
+            "react/self-closing-comp": [
+                "error",
+                {
+                    "component": true,
+                    "html": true
+                }
+            ],
+            "react/sort-prop-types": [
+                "error",
+                {
+                    "callbacksLast": true,
+                    "ignoreCase": false,
+                    "noSortAlphabetically": true
+                }
+            ]
+        },
+        "globals": {
+            "JSX": true
+        }
     },
     "prettier": {
         "trailingComma": "es5",
@@ -52,25 +155,42 @@
         "semi": true,
         "tabWidth": 4
     },
-    "eslintConfig": {
-        "plugins": [
-            "prettier"
-        ],
-        "extends": [
-            "eslint:recommended",
-            "next/core-web-vitals",
-            "prettier"
-        ],
-        "rules": {
-            "no-case-declarations": "off",
-            "no-empty-function": "off",
-            "prefer-const": "off",
-            "prettier/prettier": "error",
-            "@next/next/no-img-element": "off",
-            "react/no-unescaped-entities": "off"
-        },
-        "globals": {
-            "JSX": true
-        }
+    "dependencies": {
+        "@prisma/client": "^4.15.0",
+        "@tailwindcss/line-clamp": "^0.4.4",
+        "@tailwindcss/typography": "^0.5.9",
+        "next": "^13.4.6",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "clsx": "^1.2.1",
+        "tailwind-merge": "^1.13.2",
+        "swr": "^2.1.5",
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@types/node": "20.1.4",
+        "@types/react": "18.2.6",
+        "@types/react-dom": "18.2.4",
+        "@types/react-slider": "^1.3.1",
+        "@typescript-eslint/eslint-plugin": "^5.59.5",
+        "@typescript-eslint/parser": "^5.59.5",
+        "autoprefixer": "^10.4.14",
+        "eslint": "8.40.0",
+        "eslint-config-next": "13.4.2",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-no-relative-import-paths": "^1.5.2",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-tailwindcss": "^3.11.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.2",
+        "postcss": "^8.4.23",
+        "prettier": "^2.8.8",
+        "prisma": "^4.14.0",
+        "prisma-case-format": "^1.4.1",
+        "tailwindcss": "^3.3.2",
+        "ts-node": "^10.9.1",
+        "typescript": "5.0.4"
     }
 }

@@ -8,18 +8,23 @@
         "strict": false,
         "forceConsistentCasingInFileNames": true,
         "noEmit": true,
-        "incremental": true,
         "esModuleInterop": true,
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "preserve",
+        "incremental": true,
         "types": ["@types/node", "@types/react"],
         "paths": {
             "@/*": ["src/*"],
             "@public/*": ["public/*"]
-        }
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]
