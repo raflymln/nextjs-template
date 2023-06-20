@@ -1,4 +1,7 @@
 // @ts-check
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
     mode: "jit",
@@ -12,7 +15,9 @@ module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
             black: "#000",
             white: "#fff",
         },
-        fontFamily: {},
+        fontFamily: {
+            inter: ["var(--font-inter)", ...fontFamily.sans],
+        },
         screens: {
             xs: "360px",
             md: "768px",
