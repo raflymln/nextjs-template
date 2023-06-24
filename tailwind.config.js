@@ -27,5 +27,5 @@ module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
         },
         extend: {},
     },
-    plugins: [require("@tailwindcss/line-clamp"), require("@tailwindcss/typography")],
+    plugins: [require("@tailwindcss/typography")],
 });
