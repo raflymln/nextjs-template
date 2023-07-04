@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^4.16.2
     version: 4.16.2
   prisma-case-format:
-    specifier: ^1.4.1
-    version: 1.7.0
+    specifier: ^1.7.1
+    version: 1.7.1
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2(ts-node@10.9.1)
@@ -3352,8 +3352,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prisma-case-format@1.7.0:
-    resolution: {integrity: sha512-fR+em52Q2cHuO3fScN+SGhIyo+7Zx27VsEP6E/ijn15dzl+z47rqC5FhQCmvsXZPYGanlFKlPszbIQMzKw+pOg==}
+  /prisma-case-format@1.7.1:
+    resolution: {integrity: sha512-vVS5KawAGsjcTPDzhjbvE+onzJCwKn+RH/jtpgZzF7JoWtGQBLqjloAznlM3yUBwygaozfL6Zeiegk2oBu/UNw==}
     hasBin: true
     dependencies:
       '@prisma/internals': 4.15.0
