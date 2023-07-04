@@ -186,7 +186,7 @@
         "lint-staged": "^13.2.2",
         "postcss": "^8.4.23",
         "prettier": "^2.8.8",
-        "prisma": "^4.14.0",
+        "prisma": "^4.16.2",
         "prisma-case-format": "^1.4.1",
         "tailwindcss": "^3.3.2",
         "ts-node": "^10.9.1",
