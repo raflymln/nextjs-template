@@ -59,8 +59,8 @@ devDependencies:
     specifier: 8.43.0
     version: 8.43.0
   eslint-config-next:
-    specifier: 13.4.6
-    version: 13.4.6(eslint@8.43.0)(typescript@5.1.3)
+    specifier: 13.4.8
+    version: 13.4.8(eslint@8.43.0)(typescript@5.1.3)
   eslint-config-prettier:
     specifier: ^8.8.0
     version: 8.8.0(eslint@8.43.0)
@@ -242,8 +242,8 @@ packages:
     resolution: {integrity: sha512-nqUxEtvDqFhmV1/awSg0K2XHNwkftNaiUqCYO9e6+MYmqNObpKVl7OgMkGaQ2SZnFx5YqF0t60ZJTlyJIDAijg==}
     dev: false
 
-  /@next/eslint-plugin-next@13.4.6:
-    resolution: {integrity: sha512-bPigeu0RI7bgy1ucBA2Yqcfg539y0Lzo38P2hIkrRB1GNvFSbYg6RTu8n6tGqPVrH3TTlPTNKLXG01wc+5NuwQ==}
+  /@next/eslint-plugin-next@13.4.8:
+    resolution: {integrity: sha512-cmfVHpxWjjcETFt2WHnoFU6EmY69QcPJRlRNAooQlNe53Ke90vg1Ci/dkPffryJZaxxiRziP9bQrV8lDVCn3Fw==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -1564,8 +1564,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-next@13.4.6(eslint@8.43.0)(typescript@5.1.3):
-    resolution: {integrity: sha512-nlv4FYish1RYYHILbQwM5/rD37cOvEqtMfDjtQCYbXdE2O3MggqHu2q6IDeLE2Z6u8ZJyNPgWOA6OimWcxj3qw==}
+  /eslint-config-next@13.4.8(eslint@8.43.0)(typescript@5.1.3):
+    resolution: {integrity: sha512-2hE0b6lHuhtHBX8VgEXi8v4G8PVrPUBMOSLCTq8qtcQ2qQOX7+uBOLK2kU4FD2qDZzyXNlhmuH+WLT5ptY4XLA==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -1573,7 +1573,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.4.6
+      '@next/eslint-plugin-next': 13.4.8
       '@rushstack/eslint-patch': 1.3.2
       '@typescript-eslint/parser': 5.60.0(eslint@8.43.0)(typescript@5.1.3)
       eslint: 8.43.0
