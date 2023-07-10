@@ -156,7 +156,7 @@
         "tabWidth": 4
     },
     "dependencies": {
-        "@prisma/client": "^4.15.0",
+        "@prisma/client": "^4.16.2",
         "@tailwindcss/typography": "^0.5.9",
         "clsx": "^1.2.1",
         "next": "^13.4.6",
