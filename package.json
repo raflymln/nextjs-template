@@ -38,6 +38,7 @@
             "plugin:react/recommended"
         ],
         "rules": {
+            "no-multi-spaces": "error",
             "no-case-declarations": "off",
             "no-empty-function": "off",
             "prefer-const": "off",
