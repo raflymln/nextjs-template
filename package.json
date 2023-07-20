@@ -29,8 +29,6 @@
     },
     "dependencies": {
         "@prisma/client": "^5.0.0",
-        "@raflymln/eslint-config": "^1.0.0",
-        "@raflymln/prettier-config": "^1.0.0",
         "@tailwindcss/typography": "^0.5.9",
         "clsx": "^2.0.0",
         "next": "^13.4.10",
@@ -41,6 +39,8 @@
         "zod": "^3.21.4"
     },
     "devDependencies": {
+        "@raflymln/eslint-config": "^1.0.0",
+        "@raflymln/prettier-config": "^1.0.0",
         "@types/node": "20.4.2",
         "@types/react": "18.2.15",
         "@types/react-dom": "18.2.7",
