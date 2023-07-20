@@ -21,143 +21,16 @@
         "lint": "next lint",
         "git:prepare": "husky install"
     },
+    "prettier": "@raflymln/prettier-config",
     "eslintConfig": {
-        "parser": "@typescript-eslint/parser",
-        "plugins": [
-            "prettier",
-            "import",
-            "no-relative-import-paths"
-        ],
         "extends": [
-            "prettier",
-            "eslint:recommended",
-            "next/core-web-vitals",
-            "plugin:import/recommended",
-            "plugin:@typescript-eslint/recommended",
-            "plugin:tailwindcss/recommended",
-            "plugin:react/recommended"
-        ],
-        "rules": {
-            "no-multi-spaces": "error",
-            "no-case-declarations": "off",
-            "no-empty-function": "off",
-            "prefer-const": "off",
-            "prettier/prettier": "error",
-            "@next/next/no-img-element": "off",
-            "react/no-unescaped-entities": "off",
-            "import/no-duplicates": "error",
-            "import/no-absolute-path": "error",
-            "import/no-namespace": "error",
-            "import/first": "error",
-            "import/no-anonymous-default-export": "error",
-            "import/order": [
-                "error",
-                {
-                    "newlines-between": "always",
-                    "groups": [
-                        "type",
-                        "index",
-                        "sibling",
-                        "parent",
-                        "internal",
-                        "external",
-                        "builtin",
-                        "object"
-                    ],
-                    "alphabetize": {
-                        "order": "asc",
-                        "caseInsensitive": true
-                    }
-                }
-            ],
-            "no-relative-import-paths/no-relative-import-paths": [
-                "error",
-                {
-                    "allowSameFolder": false,
-                    "rootDir": "src",
-                    "prefix": "@"
-                }
-            ],
-            "@typescript-eslint/consistent-type-imports": [
-                "error",
-                {
-                    "prefer": "type-imports",
-                    "disallowTypeAnnotations": true,
-                    "fixStyle": "separate-type-imports"
-                }
-            ],
-            "tailwindcss/no-custom-classname": [
-                "error",
-                {
-                    "whitelist": [
-                        "group(/.*)?"
-                    ]
-                }
-            ],
-            "tailwindcss/no-arbitrary-value": "warn",
-            "react/react-in-jsx-scope": "off",
-            "react/jsx-boolean-value": "error",
-            "react/destructuring-assignment": [
-                "error",
-                "always"
-            ],
-            "react/jsx-curly-brace-presence": [
-                "error",
-                {
-                    "props": "never",
-                    "children": "never",
-                    "propElementValues": "always"
-                }
-            ],
-            "react/jsx-sort-props": [
-                "error",
-                {
-                    "multiline": "last",
-                    "ignoreCase": false,
-                    "noSortAlphabetically": true,
-                    "reservedFirst": [
-                        "key",
-                        "ref"
-                    ],
-                    "locale": "auto"
-                }
-            ],
-            "react/jsx-no-useless-fragment": "error",
-            "react/no-unknown-property": "error",
-            "react/self-closing-comp": [
-                "error",
-                {
-                    "component": true,
-                    "html": true
-                }
-            ],
-            "react/sort-prop-types": [
-                "error",
-                {
-                    "callbacksLast": true,
-                    "ignoreCase": false,
-                    "noSortAlphabetically": true
-                }
-            ]
-        },
-        "globals": {
-            "JSX": true
-        }
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "bracketSpacing": true,
-        "arrowParens": "always",
-        "endOfLine": "auto",
-        "htmlWhitespaceSensitivity": "css",
-        "bracketSameLine": false,
-        "jsxSingleQuote": false,
-        "printWidth": 200,
-        "semi": true,
-        "tabWidth": 4
+            "@raflymln/eslint-config"
+        ]
     },
     "dependencies": {
         "@prisma/client": "^5.0.0",
+        "@raflymln/eslint-config": "^1.0.0",
+        "@raflymln/prettier-config": "^1.0.0",
         "@tailwindcss/typography": "^0.5.9",
         "clsx": "^2.0.0",
         "next": "^13.4.10",
@@ -171,17 +44,8 @@
         "@types/node": "20.4.2",
         "@types/react": "18.2.15",
         "@types/react-dom": "18.2.7",
-        "@typescript-eslint/eslint-plugin": "^5.62.0",
-        "@typescript-eslint/parser": "^5.62.0",
         "autoprefixer": "^10.4.14",
         "eslint": "8.45.0",
-        "eslint-config-next": "13.4.10",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-no-relative-import-paths": "^1.5.2",
-        "eslint-plugin-prettier": "^5.0.0",
-        "eslint-plugin-react": "^7.32.2",
-        "eslint-plugin-tailwindcss": "^3.13.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.3",
         "postcss": "^8.4.26",
