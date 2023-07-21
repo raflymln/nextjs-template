@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
     mode: "jit",
@@ -27,5 +28,14 @@ module.exports = /** @satisfies {import('tailwindcss').Config} */ ({
         },
         extend: {},
     },
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [
+        require("@tailwindcss/typography"),
+        plugin(({ addBase }) => {
+            addBase({
+                "html, body": {
+                    "@apply scroll-smooth scroll-pt-12": {},
+                },
+            });
+        }),
+    ],
 });
